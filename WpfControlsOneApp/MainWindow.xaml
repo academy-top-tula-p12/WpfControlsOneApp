@@ -1,0 +1,47 @@
+﻿<Window x:Class="WpfControlsOneApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfControlsOneApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel x:Name="stack"
+        Width="200">
+
+        <Button Background="Red"
+                Foreground="White"
+                Width="200"
+                Height="100"
+                IsDefault="True"
+                Click="Button_Click">
+            Default
+        </Button>
+        <Button Background="Blue"
+            Foreground="White"
+            Width="200"
+            Height="100"
+            IsCancel="True"
+            Click="Button_Click_1">
+            Cancel
+        </Button>
+        <CheckBox x:Name="ru" 
+                  IsThreeState="True"
+                  IsChecked="{x:Null}"
+                  FontSize="20"
+                  Checked="ru_Checked"
+                  Indeterminate="ru_Indeterminate">
+            Russian
+        </CheckBox>
+        <CheckBox x:Name="en">English</CheckBox>
+
+        <RadioButton GroupName="city" Checked="RadioButton_Checked">Moscow</RadioButton>
+        <RadioButton GroupName="country">Russia</RadioButton>
+        <RadioButton GroupName="city" Checked="RadioButton_Checked">Tula</RadioButton>
+        <RadioButton GroupName="country">China</RadioButton>
+        <RadioButton GroupName="city" Checked="RadioButton_Checked">Kaluga</RadioButton>
+        <RadioButton GroupName="country">Usa</RadioButton>
+        <RadioButton GroupName="city" Checked="RadioButton_Checked">Voroneg</RadioButton>
+
+    </StackPanel>
+</Window>
